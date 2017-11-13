@@ -1,0 +1,36 @@
+{
+    "bvloginApp": {
+        "bamsOutlet" : {
+            "home": {
+                "title": "Đại lý",
+                "createLabel": "Thêm mới!",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật!",
+                "search": "Tìm kiếm"
+            },
+            "created": "Một Bams Outlet mới được tạo với định danh {{ param }}",
+            "updated": "Một Bams Outlet cập nhật với định danh {{ param }}",
+            "deleted": "Một Bams Outlet đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có muốn xóa?"
+            },
+            "detail": {
+                "title": "Đại lý"
+            },
+            "dailyId": "Mã đại lý",
+            "tendaily": "Tên đại lý",
+            "cvdl": "Cvdl",
+            "motaCvdl": "Mô tả",
+            "diachi": "Địa chỉ",
+            "dienthoai": "Điện thoại",
+            "matinh": "Mã tỉnh",
+            "activated": "Trạng thái",
+            "vphd": "Văn phòng HD",
+            "diachivphd": "Địa chỉ VPHD",
+            "maphongban": "Mã phòng ban",
+            "tenphongban": "Tên phòng ban",
+            "manhom": "Mã nhóm",
+            "tennhom": "Tên nhóm",
+            "bamsOutletPro": "Sản phẩm đại lý"
+        }
+    }
+}

@@ -1,0 +1,156 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBamsCompanyLabel" data-translate="bvloginApp.bamsCompany.home.createOrEditLabel">Create or edit a Bams Company</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bamsCompany.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bamsCompany.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.matinh" for="field_matinh">Matinh</label>
+            <input type="text" class="form-control" name="matinh" id="field_matinh"
+                    ng-model="vm.bamsCompany.matinh"
+                    required ng-maxlength="10"/>
+            <div ng-show="editForm.matinh.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matinh.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.matinh.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="10">
+                    This field cannot be longer than 10 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.tentinh" for="field_tentinh">Tentinh</label>
+            <input type="text" class="form-control" name="tentinh" id="field_tentinh"
+                    ng-model="vm.bamsCompany.tentinh"
+                    ng-maxlength="500"/>
+            <div ng-show="editForm.tentinh.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tentinh.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="500">
+                    This field cannot be longer than 500 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.diachi" for="field_diachi">Diachi</label>
+            <input type="text" class="form-control" name="diachi" id="field_diachi"
+                    ng-model="vm.bamsCompany.diachi"
+                    ng-maxlength="500"/>
+            <div ng-show="editForm.diachi.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.diachi.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="500">
+                    This field cannot be longer than 500 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.dienthoai" for="field_dienthoai">Dienthoai</label>
+            <input type="text" class="form-control" name="dienthoai" id="field_dienthoai"
+                    ng-model="vm.bamsCompany.dienthoai"
+                    ng-maxlength="200"/>
+            <div ng-show="editForm.dienthoai.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dienthoai.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.fax" for="field_fax">Fax</label>
+            <input type="text" class="form-control" name="fax" id="field_fax"
+                    ng-model="vm.bamsCompany.fax"
+                    ng-maxlength="200"/>
+            <div ng-show="editForm.fax.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.fax.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.tentinhEng" for="field_tentinhEng">Tentinh Eng</label>
+            <input type="text" class="form-control" name="tentinhEng" id="field_tentinhEng"
+                    ng-model="vm.bamsCompany.tentinhEng"
+                    ng-maxlength="500"/>
+            <div ng-show="editForm.tentinhEng.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tentinhEng.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="500">
+                    This field cannot be longer than 500 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.diachiEng" for="field_diachiEng">Diachi Eng</label>
+            <input type="text" class="form-control" name="diachiEng" id="field_diachiEng"
+                    ng-model="vm.bamsCompany.diachiEng"
+                    ng-maxlength="500"/>
+            <div ng-show="editForm.diachiEng.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.diachiEng.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="500">
+                    This field cannot be longer than 500 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.dienthoaiEng" for="field_dienthoaiEng">Dienthoai Eng</label>
+            <input type="text" class="form-control" name="dienthoaiEng" id="field_dienthoaiEng"
+                    ng-model="vm.bamsCompany.dienthoaiEng"
+                    ng-maxlength="200"/>
+            <div ng-show="editForm.dienthoaiEng.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dienthoaiEng.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.faxEng" for="field_faxEng">Fax Eng</label>
+            <input type="text" class="form-control" name="faxEng" id="field_faxEng"
+                    ng-model="vm.bamsCompany.faxEng"
+                    ng-maxlength="20"/>
+            <div ng-show="editForm.faxEng.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.faxEng.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.compId" for="field_compId">Comp Id</label>
+            <input type="text" class="form-control" name="compId" id="field_compId"
+                    ng-model="vm.bamsCompany.compId"
+                    ng-maxlength="64"/>
+            <div ng-show="editForm.compId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compId.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsCompany.sequenced" for="field_sequenced">Sequenced</label>
+            <input type="number" class="form-control" name="sequenced" id="field_sequenced"
+                    ng-model="vm.bamsCompany.sequenced"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+{
+    "bvloginApp": {
+        "bamsOutlet" : {
+            "home": {
+                "title": "Outlets",
+                "createLabel": "Create New",
+                "createOrEditLabel": "Create or edit a Bams Outlet",
+                "search": "Search"
+            },
+            "created": "A new Bams Outlet is created with identifier {{ param }}",
+            "updated": "A Bams Outlet is updated with identifier {{ param }}",
+            "deleted": "A Bams Outlet is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Outlet {{ id }}?"
+            },
+            "detail": {
+                "title": "Outlet"
+            },
+            "dailyId": "Value",
+            "tendaily": "Name",
+            "cvdl": "CVDL",
+            "motaCvdl": "Description CVDL",
+            "diachi": "Address",
+            "dienthoai": "Phone",
+            "matinh": "CompanyCode",
+            "activated": "Activated",
+            "vphd": "VPHD",
+            "diachivphd": "Address VPHD",
+            "maphongban": "DepartmentCode",
+            "tenphongban": "DeparmentName",
+            "manhom": "GroupCode",
+            "tennhom": "GroupName",
+            "bamsOutletPro": "Bams Outlet Pro"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsGenerType.detail.title">Bams Gener Type</span> {{vm.bamsGenerType.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeCode">Type Code</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeCode}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeName">Type Name</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeName}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeStatusCode">Type Status Code</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeStatusCode}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeCreatedBy">Type Created By</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeCreatedBy}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeCreatedDate">Type Created Date</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeCreatedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeLastUpdateBy">Type Last Update By</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeLastUpdateBy}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeLastUpdateDate">Type Last Update Date</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeLastUpdateDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerType.typeVersionId">Type Version Id</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerType.typeVersionId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-gener-type-detail.edit({id:vm.bamsGenerType.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsOutletPro.detail.title">Bams Outlet Pro</span> {{vm.bamsOutletPro.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsOutletPro.sourcedata">Sourcedata</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.sourcedata}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.producttype">Producttype</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.producttype}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.effectivedate">Effectivedate</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.effectivedate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.ceasedate">Ceasedate</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.ceasedate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.productcode">Productcode</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.productcode}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.companycode">Companycode</span></dt>
+        <dd>
+            <span>{{vm.bamsOutletPro.companycode}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutletPro.bamsOutlet">Bams Outlet</span></dt>
+        <dd>
+            <a ui-sref="bams-outlet-detail({id:vm.bamsOutletPro.bamsOutlet.id})">{{vm.bamsOutletPro.bamsOutlet.tendaily}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-outlet-pro-detail.edit({id:vm.bamsOutletPro.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

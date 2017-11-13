@@ -1,0 +1,15 @@
+version: '2'
+services:
+    bvlogin-app:
+        image: bvlogin
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@bvlogin-oracle:1521:bvlogin
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=bvlogin-elasticsearch:9300
+        ports:
+            - 8080:8080
+    bvlogin-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: bvlogin-elasticsearch

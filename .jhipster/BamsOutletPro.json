@@ -1,0 +1,66 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "bamsOutlet",
+            "otherEntityName": "bamsOutlet",
+            "otherEntityField": "tendaily"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "sourcedata",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "producttype",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 60
+        },
+        {
+            "fieldName": "effectivedate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ceasedate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "productcode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        },
+        {
+            "fieldName": "companycode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "9"
+        }
+    ],
+    "changelogDate": "20170424042042",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "bams_outlet_product",
+    "pagination": "pager"
+}

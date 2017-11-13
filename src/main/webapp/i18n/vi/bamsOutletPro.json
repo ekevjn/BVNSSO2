@@ -1,0 +1,28 @@
+{
+    "bvloginApp": {
+        "bamsOutletPro" : {
+            "home": {
+                "title": "Sản phẩm đại lý",
+                "createLabel": "Thêm mới!",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật!",
+                "search": "Tìm kiếm"
+            },
+            "created": "Một Bams Outlet Pro mới được tạo với định danh {{ param }}",
+            "updated": "Một Bams Outlet Pro cập nhật với định danh {{ param }}",
+            "deleted": "Một Bams Outlet Pro đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa?"
+            },
+            "detail": {
+                "title": "Sản phẩm đại lý"
+            },
+            "sourcedata": "Source Data",
+            "producttype": "Loại sản phẩm",
+            "effectivedate": "Bán từ ngày",
+            "ceasedate": "Bán đến ngày",
+            "productcode": "Mã sản phẩm",
+            "companycode": "Mã tỉnh",
+            "bamsOutlet": "Tên đại lý"
+        }
+    }
+}

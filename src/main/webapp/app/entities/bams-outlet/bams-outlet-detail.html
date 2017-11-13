@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsOutlet.detail.title">Bams Outlet</span> {{vm.bamsOutlet.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsOutlet.dailyId">Daily Id</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.dailyId}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.tendaily">Tendaily</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.tendaily}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.cvdl">Cvdl</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.cvdl}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.motaCvdl">Mota Cvdl</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.motaCvdl}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.diachi">Diachi</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.diachi}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.dienthoai">Dienthoai</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.dienthoai}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.matinh">Matinh</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.matinh}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.activated">Activated</span></dt>
+        <dd>
+            <span>
+                <input type="checkbox" name="activated" id="field_activated"
+                       ng-model="vm.bamsOutlet.activated"/>
+            </span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.vphd">Vphd</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.vphd}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.diachivphd">Diachivphd</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.diachivphd}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.maphongban">Maphongban</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.maphongban}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.tenphongban">Tenphongban</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.tenphongban}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.manhom">Manhom</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.manhom}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsOutlet.tennhom">Tennhom</span></dt>
+        <dd>
+            <span>{{vm.bamsOutlet.tennhom}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-outlet-detail.edit({id:vm.bamsOutlet.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

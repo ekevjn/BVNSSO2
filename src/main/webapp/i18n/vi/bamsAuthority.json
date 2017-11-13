@@ -1,0 +1,30 @@
+{
+    "bvloginApp": {
+        "bamsAuthority" : {
+            "home": {
+                "title": "Bams Authorities",
+                "createLabel": "Thêm mới một Bams Authority",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Bams Authority",
+                "search": "Tìm Bams Authority"
+            },
+            "created": "Một Bams Authority mới được tạo với định danh {{ param }}",
+            "updated": "Một Bams Authority cập nhật với định danh {{ param }}",
+            "deleted": "Một Bams Authority đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Bams Authority {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Authority"
+            },
+            "name": "Name",
+            "description": "Description",
+            "activated": "Activated",
+            "createdby": "Createdby",
+            "createddate": "Createddate",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddate": "Lastmodifieddate",
+            "bamsPermission": "Bams Permission",
+            "bamsGenerCode": "Bams Gener Code"
+        }
+    }
+}

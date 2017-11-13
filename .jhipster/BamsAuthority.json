@@ -1,0 +1,72 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "bamsPermission",
+            "otherEntityName": "bamsPermission",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bamsAuthority"
+        },
+        {
+            "relationshipName": "bamsGenerCode",
+            "otherEntityName": "bamsGenerCode",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "bamsAuthority"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "150"
+        },
+        {
+            "fieldName": "activated",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "createddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastmodifieddate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170421025900",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "bams_authority",
+    "pagination": "pagination"
+}

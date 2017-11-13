@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity BamsGenerCode.
+    -->
+    <changeSet id="20170420031726-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="bams_generic_type_id"
+                                 baseTableName="bams_generic_code"
+                                 constraintName="bams_cod_ty_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_generic_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="bams_gener_codes_id"
+                                 baseTableName="bams_gener_code_bams_user"
+                                 constraintName="bams_cod_co_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_generic_code"/>
+        <addForeignKeyConstraint baseColumnNames="bams_users_id"
+                                 baseTableName="bams_gener_code_bams_user"
+                                 constraintName="bams_cod_users_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_user"/>
+        
+        <addForeignKeyConstraint baseColumnNames="bams_gener_codes_id"
+                                 baseTableName="bams_gener_code_bams_authority"
+                                 constraintName="bams_cod_co_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_generic_code"/>
+        <addForeignKeyConstraint baseColumnNames="bams_authorities_id"
+                                 baseTableName="bams_gener_code_bams_authority"
+                                 constraintName="bams_cod_authorit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_authority"/>
+        
+    </changeSet>
+</databaseChangeLog>

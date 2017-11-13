@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity BamsAuthority.
+    -->
+    <changeSet id="20170421025900-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="bams_authorities_id"
+                                 baseTableName="bams_authority_bams_permission"
+                                 constraintName="bams_author_authorit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_authority"/>
+        <addForeignKeyConstraint baseColumnNames="bams_permissions_id"
+                                 baseTableName="bams_authority_bams_permission"
+                                 constraintName="bams_author_permissi_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bams_permission"/>
+        
+    </changeSet>
+</databaseChangeLog>

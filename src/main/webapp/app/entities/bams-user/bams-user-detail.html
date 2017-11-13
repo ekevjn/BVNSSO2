@@ -1,0 +1,91 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsUser.detail.title">Bams User</span> {{vm.bamsUser.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsUser.uname">UserName</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.uname}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.firstname">Firstname</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.firstname}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.lastname">Lastname</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.lastname}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.email">Email</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.email}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.gender}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.activated">Activated</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.activated}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.langkey">Langkey</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.langkey}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.activationkey">Activationkey</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.activationkey}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.resetkey">Resetkey</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.resetkey}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.createdby">Createdby</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.createdby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.createddate">Createddate</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.createddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.resetdate">Resetdate</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.resetdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.lastmodifiedby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.lastmodifieddate">Lastmodifieddate</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.lastmodifieddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.user_type">User Type</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.user_type}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.outlet_id">Outlet Id</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.outlet_id}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.comp_code">Comp Code</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.comp_code}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsUser.mobi_phone">Mobi Phone</span></dt>
+        <dd>
+            <span>{{vm.bamsUser.mobi_phone}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-user-detail.edit({id:vm.bamsUser.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

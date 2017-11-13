@@ -1,0 +1,53 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsAuthority.detail.title">Bams Authority</span> {{vm.bamsAuthority.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsAuthority.name">Name</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.name}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.description">Description</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.description}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.activated">Activated</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.activated}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.createdby">Createdby</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.createdby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.createddate">Createddate</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.createddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.lastmodifiedby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.lastmodifieddate">Lastmodifieddate</span></dt>
+        <dd>
+            <span>{{vm.bamsAuthority.lastmodifieddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsAuthority.bamsPermission">Bams Permission</span></dt>
+        <dd>
+            <span ng-repeat="bamsPermission in vm.bamsAuthority.bamsPermissions">
+                <a ui-sref="bams-permission-detail({id: bamsPermission.id})">{{bamsPermission.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-authority-detail.edit({id:vm.bamsAuthority.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

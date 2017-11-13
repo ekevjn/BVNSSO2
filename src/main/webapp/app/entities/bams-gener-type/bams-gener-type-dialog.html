@@ -1,0 +1,113 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBamsGenerTypeLabel" data-translate="bvloginApp.bamsGenerType.home.createOrEditLabel">Create or edit a Bams Gener Type</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bamsGenerType.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bamsGenerType.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeCode" for="field_typeCode">Type Code</label>
+            <input type="text" class="form-control" name="typeCode" id="field_typeCode"
+                    ng-model="vm.bamsGenerType.typeCode"
+                    required ng-minlength="0" ng-maxlength="60"/>
+            <div ng-show="editForm.typeCode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeCode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.typeCode.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="0">
+                    This field is required to be at least 0 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.typeCode.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="60">
+                    This field cannot be longer than 60 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeName" for="field_typeName">Type Name</label>
+            <input type="text" class="form-control" name="typeName" id="field_typeName"
+                    ng-model="vm.bamsGenerType.typeName"
+                    ng-maxlength="150"/>
+            <div ng-show="editForm.typeName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeName.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="150">
+                    This field cannot be longer than 150 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeStatusCode" for="field_typeStatusCode">Type Status Code</label>
+                <input type="checkbox" name="typeStatusCode" id="field_typeStatusCode"
+                          ng-model="vm.bamsGenerType.typeStatusCode"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeCreatedBy" for="field_typeCreatedBy">Type Created By</label>
+            <input type="text" class="form-control" name="typeCreatedBy" id="field_typeCreatedBy"
+                    ng-model="vm.bamsGenerType.typeCreatedBy"
+                    ng-maxlength="60"/>
+            <div ng-show="editForm.typeCreatedBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeCreatedBy.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="60">
+                    This field cannot be longer than 60 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeCreatedDate" for="field_typeCreatedDate">Type Created Date</label>
+                <div class="input-group">
+                    <input id="field_typeCreatedDate" type="text" class="form-control" name="typeCreatedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsGenerType.typeCreatedDate" is-open="vm.datePickerOpenStatus.typeCreatedDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('typeCreatedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeLastUpdateBy" for="field_typeLastUpdateBy">Type Last Update By</label>
+            <input type="text" class="form-control" name="typeLastUpdateBy" id="field_typeLastUpdateBy"
+                    ng-model="vm.bamsGenerType.typeLastUpdateBy"
+                    ng-maxlength="60"/>
+            <div ng-show="editForm.typeLastUpdateBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeLastUpdateBy.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="60">
+                    This field cannot be longer than 60 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeLastUpdateDate" for="field_typeLastUpdateDate">Type Last Update Date</label>
+                <div class="input-group">
+                    <input id="field_typeLastUpdateDate" type="text" class="form-control" name="typeLastUpdateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsGenerType.typeLastUpdateDate" is-open="vm.datePickerOpenStatus.typeLastUpdateDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('typeLastUpdateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerType.typeVersionId" for="field_typeVersionId">Type Version Id</label>
+            <input type="number" class="form-control" name="typeVersionId" id="field_typeVersionId"
+                    ng-model="vm.bamsGenerType.typeVersionId"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

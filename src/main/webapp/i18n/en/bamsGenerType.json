@@ -1,0 +1,30 @@
+{
+    "bvloginApp": {
+        "bamsGenerType" : {
+            "home": {
+                "title": "Bams Gener Types",
+                "createLabel": "Create a new Bams Gener Type",
+                "createOrEditLabel": "Create or edit a Bams Gener Type",
+                "search": "Search for Bams Gener Type"
+            },
+            "created": "A new Bams Gener Type is created with identifier {{ param }}",
+            "updated": "A Bams Gener Type is updated with identifier {{ param }}",
+            "deleted": "A Bams Gener Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bams Gener Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Gener Type"
+            },
+            "typeCode": "Type Code",
+            "typeName": "Type Name",
+            "typeStatusCode": "Type Status Code",
+            "typeCreatedBy": "Type Created By",
+            "typeCreatedDate": "Type Created Date",
+            "typeLastUpdateBy": "Type Last Update By",
+            "typeLastUpdateDate": "Type Last Update Date",
+            "typeVersionId": "Type Version Id",
+            "bamsGenerCode": "Bams Gener Code"
+        }
+    }
+}

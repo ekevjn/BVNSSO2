@@ -1,0 +1,60 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.baoviet.login",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "4.3.0",
+    "baseName": "bvlogin",
+    "packageName": "com.baoviet.login",
+    "packageFolder": "com/baoviet/login",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "oracle",
+    "prodDatabaseType": "oracle",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "6cbbcbc2bc6120a6d8b5f7a9686dfbbc910ad3f7",
+    "clientFramework": "angular1",
+    "useSass": true,
+    "clientPackageManager": "yarn",
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nav-element",
+        "version": "1.2.2"
+      },
+      {
+        "name": "generator-jhipster-bootstrap-material-design",
+        "version": "3.5.1"
+      },
+      {
+        "name": "generator-jhipster-swagger2markup",
+        "version": "1.2.0"
+      },
+      {
+        "name": "generator-jhipster-entity-audit",
+        "version": "2.4.0"
+      },
+      {
+        "name": "generator-jhipster-elasticsearch-reindexer",
+        "version": "0.3.0"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "vi"
+    ]
+  }
+}

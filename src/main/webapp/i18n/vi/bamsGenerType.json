@@ -1,0 +1,30 @@
+{
+    "bvloginApp": {
+        "bamsGenerType" : {
+            "home": {
+                "title": "Bams Gener Types",
+                "createLabel": "Thêm mới một Bams Gener Type",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Bams Gener Type",
+                "search": "Tìm Bams Gener Type"
+            },
+            "created": "Một Bams Gener Type mới được tạo với định danh {{ param }}",
+            "updated": "Một Bams Gener Type cập nhật với định danh {{ param }}",
+            "deleted": "Một Bams Gener Type đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Bams Gener Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Gener Type"
+            },
+            "typeCode": "Type Code",
+            "typeName": "Type Name",
+            "typeStatusCode": "Type Status Code",
+            "typeCreatedBy": "Type Created By",
+            "typeCreatedDate": "Type Created Date",
+            "typeLastUpdateBy": "Type Last Update By",
+            "typeLastUpdateDate": "Type Last Update Date",
+            "typeVersionId": "Type Version Id",
+            "bamsGenerCode": "Bams Gener Code"
+        }
+    }
+}

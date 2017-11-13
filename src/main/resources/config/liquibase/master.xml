@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!--<include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170420031726_added_entity_BamsCompany.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170420031726_added_entity_BamsGenerCode.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170420031726_added_entity_BamsGenerType.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170421014518_added_entity_BamsUser.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170421024231_added_entity_BamsPermission.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170421025900_added_entity_BamsAuthority.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="classpath:config/liquibase/changelog/20170424042042_added_entity_BamsOutlet.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="classpath:config/liquibase/changelog/20170424042042_added_entity_BamsOutletPro.xml" relativeToChangelogFile="false"/>-->
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!--<include file="config/liquibase/changelog/20170420031726_added_entity_constraints_BamsGenerCode.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20170421025900_added_entity_constraints_BamsAuthority.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="classpath:config/liquibase/changelog/20170424042042_added_entity_constraints_BamsOutletPro.xml" relativeToChangelogFile="false"/>-->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

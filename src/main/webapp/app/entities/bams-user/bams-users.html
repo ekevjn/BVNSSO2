@@ -1,0 +1,108 @@
+<div>
+    <h2 data-translate="bvloginApp.bamsUser.home.title">Bams Users</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="bams-user.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="bvloginApp.bamsUser.home.createLabel">
+                        Create new Bams User
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'bvloginApp.bamsUser.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="uname"><span data-translate="bvloginApp.bamsUser.uname">UserName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="firstname"><span data-translate="bvloginApp.bamsUser.firstname">Firstname</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastname"><span data-translate="bvloginApp.bamsUser.lastname">Lastname</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="bvloginApp.bamsUser.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender"><span data-translate="bvloginApp.bamsUser.gender">Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activated"><span data-translate="bvloginApp.bamsUser.activated">Activated</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="langkey"><span data-translate="bvloginApp.bamsUser.langkey">Langkey</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activationkey"><span data-translate="bvloginApp.bamsUser.activationkey">Activationkey</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="resetkey"><span data-translate="bvloginApp.bamsUser.resetkey">Resetkey</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdby"><span data-translate="bvloginApp.bamsUser.createdby">Createdby</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createddate"><span data-translate="bvloginApp.bamsUser.createddate">Createddate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="resetdate"><span data-translate="bvloginApp.bamsUser.resetdate">Resetdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastmodifiedby"><span data-translate="bvloginApp.bamsUser.lastmodifiedby">Lastmodifiedby</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastmodifieddate"><span data-translate="bvloginApp.bamsUser.lastmodifieddate">Lastmodifieddate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user_type"><span data-translate="bvloginApp.bamsUser.user_type">User Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="outlet_id"><span data-translate="bvloginApp.bamsUser.outlet_id">Outlet Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="comp_code"><span data-translate="bvloginApp.bamsUser.comp_code">Comp Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mobi_phone"><span data-translate="bvloginApp.bamsUser.mobi_phone">Mobi Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bamsUser in vm.bamsUsers track by bamsUser.id">
+                    <td>{{bamsUser.uname}}</td>
+                    <td>{{bamsUser.firstname}}</td>
+                    <td>{{bamsUser.lastname}}</td>
+                    <td>{{bamsUser.email}}</td>
+                    <td>{{bamsUser.gender}}</td>
+                    <td>{{bamsUser.activated}}</td>
+                    <td>{{bamsUser.activationkey}}</td>
+                    <td>{{bamsUser.resetkey}}</td>
+                    <td>{{bamsUser.createdby}}</td>
+                        <td>{{bamsUser.createddate | date:'mediumDate'}}</td>
+                        <td>{{bamsUser.resetdate | date:'mediumDate'}}</td>
+                    <td>{{bamsUser.lastmodifiedby}}</td>
+                        <td>{{bamsUser.lastmodifieddate | date:'mediumDate'}}</td>
+                    <td>{{bamsUser.user_type}}</td>
+                    <td>{{bamsUser.outlet_id}}</td>
+                    <td>{{bamsUser.comp_code}}</td>
+                    <td>{{bamsUser.mobi_phone}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="bams-user-detail({id:bamsUser.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="bams-user.edit({id:bamsUser.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="bams-user.delete({id:bamsUser.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

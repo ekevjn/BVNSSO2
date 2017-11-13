@@ -1,0 +1,166 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "bamsGenerCode",
+            "otherEntityName": "bamsGenerCode",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "bamsUser"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "uname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "passwordhash",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        },
+        {
+            "fieldName": "firstname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "imageurl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "256"
+        },
+        {
+            "fieldName": "activated",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "langkey",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "5"
+        },
+        {
+            "fieldName": "activationkey",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "20"
+        },
+        {
+            "fieldName": "resetkey",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "createdby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "createddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "resetdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastmodifieddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "user_type",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        },
+        {
+            "fieldName": "outlet_id",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        },
+        {
+            "fieldName": "comp_code",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        },
+        {
+            "fieldName": "mobi_phone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        }
+    ],
+    "changelogDate": "20170421014518",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "bams_user",
+    "pagination": "pagination"
+}

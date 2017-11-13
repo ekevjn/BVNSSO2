@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsCompany.detail.title">Bams Company</span> {{vm.bamsCompany.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsCompany.matinh">Matinh</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.matinh}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.tentinh">Tentinh</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.tentinh}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.diachi">Diachi</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.diachi}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.dienthoai">Dienthoai</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.dienthoai}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.fax">Fax</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.fax}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.tentinhEng">Tentinh Eng</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.tentinhEng}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.diachiEng">Diachi Eng</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.diachiEng}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.dienthoaiEng">Dienthoai Eng</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.dienthoaiEng}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.faxEng">Fax Eng</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.faxEng}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.compId">Comp Id</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.compId}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsCompany.sequenced">Sequenced</span></dt>
+        <dd>
+            <span>{{vm.bamsCompany.sequenced}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-company-detail.edit({id:vm.bamsCompany.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

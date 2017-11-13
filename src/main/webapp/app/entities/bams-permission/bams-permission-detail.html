@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsPermission.detail.title">Bams Permission</span> {{vm.bamsPermission.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsPermission.name">Name</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.name}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsPermission.description">Description</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.description}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsPermission.createdby">Createdby</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.createdby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsPermission.createddate">Createddate</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.createddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsPermission.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.lastmodifiedby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsPermission.lastmodifieddate">Lastmodifieddate</span></dt>
+        <dd>
+            <span>{{vm.bamsPermission.lastmodifieddate | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-permission-detail.edit({id:vm.bamsPermission.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

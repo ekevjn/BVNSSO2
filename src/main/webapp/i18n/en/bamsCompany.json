@@ -1,0 +1,32 @@
+{
+    "bvloginApp": {
+        "bamsCompany" : {
+            "home": {
+                "title": "Bams Companies",
+                "createLabel": "Create a new Bams Company",
+                "createOrEditLabel": "Create or edit a Bams Company",
+                "search": "Search for Bams Company"
+            },
+            "created": "A new Bams Company is created with identifier {{ param }}",
+            "updated": "A Bams Company is updated with identifier {{ param }}",
+            "deleted": "A Bams Company is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bams Company {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Company"
+            },
+            "matinh": "CompanyCode",
+            "tentinh": "CompanyName",
+            "diachi": "Address",
+            "dienthoai": "Phone",
+            "fax": "Fax",
+            "tentinhEng": "CompanyCode Eng",
+            "diachiEng": "CompanyName Eng",
+            "dienthoaiEng": "Phone Eng",
+            "faxEng": "Fax Eng",
+            "compId": "Comp Id",
+            "sequenced": "Sequenced"
+        }
+    }
+}

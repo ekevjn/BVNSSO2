@@ -1,0 +1,33 @@
+{
+    "bvloginApp": {
+        "bamsGenerCode" : {
+            "home": {
+                "title": "Bams Gener Codes",
+                "createLabel": "Thêm mới một Bams Gener Code",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Bams Gener Code",
+                "search": "Tìm Bams Gener Code"
+            },
+            "created": "Một Bams Gener Code mới được tạo với định danh {{ param }}",
+            "updated": "Một Bams Gener Code cập nhật với định danh {{ param }}",
+            "deleted": "Một Bams Gener Code đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Bams Gener Code {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Gener Code"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "activated": "Activated",
+            "createdby": "Createdby",
+            "createddate": "Createddate",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddate": "Lastmodifieddate",
+            "versionId": "Version Id",
+            "bamsGenerType": "Bams Gener Type",
+            "bamsUser": "Bams User",
+            "bamsAuthority": "Bams Authority"
+        }
+    }
+}

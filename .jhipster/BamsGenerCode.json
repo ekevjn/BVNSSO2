@@ -1,0 +1,93 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "bamsGenerType",
+            "otherEntityName": "bamsGenerType",
+            "otherEntityField": "type_code"
+        },
+        {
+            "relationshipName": "bamsUser",
+            "otherEntityName": "bamsUser",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "uname",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bamsGenerCode"
+        },
+        {
+            "relationshipName": "bamsAuthority",
+            "otherEntityName": "bamsAuthority",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bamsGenerCode"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "minlength"
+            ],
+            "fieldValidateRulesMaxlength": 50,
+            "fieldValidateRulesMinlength": 0
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 150
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 150
+        },
+        {
+            "fieldName": "activated",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "createddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "lastmodifieddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "versionId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170420031726",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "bams_generic_code",
+    "pagination": "pager"
+}

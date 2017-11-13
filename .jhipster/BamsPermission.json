@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "bamsAuthority",
+            "otherEntityName": "bamsAuthority",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "bamsPermission"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "150"
+        },
+        {
+            "fieldName": "createdby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "createddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastmodifiedby",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "lastmodifieddate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170421024231",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "bams_permission",
+    "pagination": "pagination"
+}

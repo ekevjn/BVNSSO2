@@ -1,0 +1,28 @@
+{
+    "bvloginApp": {
+        "bamsPermission" : {
+            "home": {
+                "title": "Bams Permissions",
+                "createLabel": "Create a new Bams Permission",
+                "createOrEditLabel": "Create or edit a Bams Permission",
+                "search": "Search for Bams Permission"
+            },
+            "created": "A new Bams Permission is created with identifier {{ param }}",
+            "updated": "A Bams Permission is updated with identifier {{ param }}",
+            "deleted": "A Bams Permission is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bams Permission {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Permission"
+            },
+            "name": "Name",
+            "description": "Description",
+            "createdby": "Createdby",
+            "createddate": "Createddate",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddate": "Lastmodifieddate",
+            "bamsAuthority": "Bams Authority"
+        }
+    }
+}

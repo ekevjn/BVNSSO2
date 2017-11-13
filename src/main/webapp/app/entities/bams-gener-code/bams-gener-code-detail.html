@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span data-translate="bvloginApp.bamsGenerCode.detail.title">Bams Gener Code</span> {{vm.bamsGenerCode.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bvloginApp.bamsGenerCode.code">Code</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.code}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.name">Name</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.name}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.description">Description</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.description}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.activated">Activated</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.activated}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.createdby">Createdby</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.createdby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.createddate">Createddate</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.createddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.lastmodifiedby">Lastmodifiedby</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.lastmodifiedby}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.lastmodifieddate">Lastmodifieddate</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.lastmodifieddate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.versionId">Version Id</span></dt>
+        <dd>
+            <span>{{vm.bamsGenerCode.versionId}}</span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.bamsGenerType">Bams Gener Type</span></dt>
+        <dd>
+            <a ui-sref="bams-gener-type-detail({id:vm.bamsGenerCode.bamsGenerType.id})">{{vm.bamsGenerCode.bamsGenerType.typeCode}}</a>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.bamsUser">Bams User</span></dt>
+        <dd>
+            <span ng-repeat="bamsUser in vm.bamsGenerCode.bamsUsers">
+                <a ui-sref="bams-user-detail({id: bamsUser.id})">{{bamsUser.uname}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="bvloginApp.bamsGenerCode.bamsAuthority">Bams Authority</span></dt>
+        <dd>
+            <span ng-repeat="bamsAuthority in vm.bamsGenerCode.bamsAuthorities">
+                <a ui-sref="bams-authority-detail({id: bamsAuthority.id})">{{bamsAuthority.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bams-gener-code-detail.edit({id:vm.bamsGenerCode.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

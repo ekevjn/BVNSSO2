@@ -1,0 +1,136 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBamsOutletProLabel" data-translate="bvloginApp.bamsOutletPro.home.createOrEditLabel">Create or edit a Bams Outlet Pro</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bamsOutletPro.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bamsOutletPro.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.productcode" for="field_productcode">Productcode</label>
+            <input type="text" class="form-control" name="productcode" id="field_productcode" placeholder="mã sản phẩm"
+                   ng-model="vm.bamsOutletPro.productcode"
+                   required ng-maxlength="60"/>
+            <div ng-show="editForm.productcode.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.productcode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.productcode.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="60">
+                    This field cannot be longer than 60 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.companycode" for="field_companycode">Companycode</label>
+            <input type="text" class="form-control" name="companycode" id="field_companycode"
+                   ng-model="vm.bamsOutletPro.companycode"
+                   required ng-maxlength="9"/>
+            <div ng-show="editForm.companycode.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.companycode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.companycode.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="9">
+                    This field cannot be longer than 9 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.effectivedate" for="field_effectivedate">Effectivedate</label>
+            <div class="input-group">
+                <input id="field_effectivedate" type="text" class="form-control" name="effectivedate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsOutletPro.effectivedate" is-open="vm.datePickerOpenStatus.effectivedate"
+                       required/>
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('effectivedate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+            <div ng-show="editForm.effectivedate.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.effectivedate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.ceasedate" for="field_ceasedate">Ceasedate</label>
+            <div class="input-group">
+                <input id="field_ceasedate" type="text" class="form-control" name="ceasedate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsOutletPro.ceasedate" is-open="vm.datePickerOpenStatus.ceasedate"
+                       required/>
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ceasedate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+            <div ng-show="editForm.ceasedate.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.ceasedate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.sourcedata" for="field_sourcedata">Sourcedata</label>
+            <input type="text" class="form-control" name="sourcedata" id="field_sourcedata"
+                    ng-model="vm.bamsOutletPro.sourcedata"
+                    ng-maxlength="20"/>
+            <div ng-show="editForm.sourcedata.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sourcedata.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsOutletPro.producttype" for="field_producttype">Producttype</label>
+            <input type="text" class="form-control" name="producttype" id="field_producttype"
+                    ng-model="vm.bamsOutletPro.producttype"
+                    ng-maxlength="60"/>
+            <div ng-show="editForm.producttype.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.producttype.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="60">
+                    This field cannot be longer than 60 characters.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!--<div class="form-group">
+            <label data-translate="bvloginApp.bamsOutletPro.bamsOutlet" for="field_bamsOutlet">Bams Outlet</label>
+            <select class="form-control" id="field_bamsOutlet" name="bamsOutlet" ng-model="vm.bamsOutletPro.bamsOutlet" ng-options="bamsOutlet as bamsOutlet.tendaily for bamsOutlet in vm.bamsoutlets track by bamsOutlet.id">
+                <option value=""></option>
+            </select>
+        </div>-->
+
+        <div class="form-group">
+            <label data-translate="bvloginApp.bamsOutletPro.bamsOutlet" for="field_bamsOutlet">Bams Outlet</label>
+            <input type="text" class="form-control" id="field_bamsOutlet" name="bamsOutlet" ng-model="vm.bamsOutletPro.bamsOutlet.tendaily" ng-keyup="bamcomplete(vm.bamsOutletPro.bamsOutlet.tendaily)">
+            <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+                <li class="list-group-item" ng-repeat="bamsOutlet in filterOutlet"
+                    ng-click="fillTextboxBams(bamsOutlet)">{{bamsOutlet.tendaily}}</li>
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

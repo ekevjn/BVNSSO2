@@ -1,0 +1,139 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBamsGenerCodeLabel" data-translate="bvloginApp.bamsGenerCode.home.createOrEditLabel">Create or edit a Bams Gener Code</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bamsGenerCode.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bamsGenerCode.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.code" for="field_code">Code</label>
+            <input type="text" class="form-control" name="code" id="field_code"
+                    ng-model="vm.bamsGenerCode.code"
+                    required ng-minlength="0" ng-maxlength="50"/>
+            <div ng-show="editForm.code.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.code.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.code.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="0">
+                    This field is required to be at least 0 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.code.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.bamsGenerCode.name"
+                    ng-maxlength="150"/>
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="150">
+                    This field cannot be longer than 150 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.bamsGenerCode.description"
+                    ng-maxlength="150"/>
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="150">
+                    This field cannot be longer than 150 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.activated" for="field_activated">Activated</label>
+                <input type="checkbox" name="activated" id="field_activated"
+                          ng-model="vm.bamsGenerCode.activated"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.createdby" for="field_createdby">Createdby</label>
+            <input type="text" class="form-control" name="createdby" id="field_createdby"
+                    ng-model="vm.bamsGenerCode.createdby"
+                    ng-maxlength="50"/>
+            <div ng-show="editForm.createdby.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.createdby.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.createddate" for="field_createddate">Createddate</label>
+                <div class="input-group">
+                    <input id="field_createddate" type="text" class="form-control" name="createddate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsGenerCode.createddate" is-open="vm.datePickerOpenStatus.createddate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createddate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.lastmodifiedby" for="field_lastmodifiedby">Lastmodifiedby</label>
+            <input type="text" class="form-control" name="lastmodifiedby" id="field_lastmodifiedby"
+                    ng-model="vm.bamsGenerCode.lastmodifiedby"
+                    ng-maxlength="50"/>
+            <div ng-show="editForm.lastmodifiedby.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastmodifiedby.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.lastmodifieddate" for="field_lastmodifieddate">Lastmodifieddate</label>
+                <div class="input-group">
+                    <input id="field_lastmodifieddate" type="text" class="form-control" name="lastmodifieddate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bamsGenerCode.lastmodifieddate" is-open="vm.datePickerOpenStatus.lastmodifieddate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastmodifieddate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bvloginApp.bamsGenerCode.versionId" for="field_versionId">Version Id</label>
+            <input type="number" class="form-control" name="versionId" id="field_versionId"
+                    ng-model="vm.bamsGenerCode.versionId"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="bvloginApp.bamsGenerCode.bamsGenerType" for="field_bamsGenerType">Bams Gener Type</label>
+            <select class="form-control" id="field_bamsGenerType" name="bamsGenerType" ng-model="vm.bamsGenerCode.bamsGenerType" ng-options="bamsGenerType as bamsGenerType.typeCode for bamsGenerType in vm.bamsgenertypes track by bamsGenerType.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="bvloginApp.bamsGenerCode.bamsUser" for="field_bamsUser">Bams User</label>
+            <select class="form-control" id="field_bamsUser" multiple name="bamsUser" ng-model="vm.bamsGenerCode.bamsUsers" ng-options="bamsUser as bamsUser.uname for bamsUser in vm.bamsusers track by bamsUser.id"></select>
+        </div>
+        <div class="form-group">
+            <label data-translate="bvloginApp.bamsGenerCode.bamsAuthority" for="field_bamsAuthority">Bams Authority</label>
+            <select class="form-control" id="field_bamsAuthority" multiple name="bamsAuthority" ng-model="vm.bamsGenerCode.bamsAuthorities" ng-options="bamsAuthority as bamsAuthority.name for bamsAuthority in vm.bamsauthorities track by bamsAuthority.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

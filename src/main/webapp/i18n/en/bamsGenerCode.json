@@ -1,0 +1,33 @@
+{
+    "bvloginApp": {
+        "bamsGenerCode" : {
+            "home": {
+                "title": "Bams Gener Codes",
+                "createLabel": "Create a new Bams Gener Code",
+                "createOrEditLabel": "Create or edit a Bams Gener Code",
+                "search": "Search for Bams Gener Code"
+            },
+            "created": "A new Bams Gener Code is created with identifier {{ param }}",
+            "updated": "A Bams Gener Code is updated with identifier {{ param }}",
+            "deleted": "A Bams Gener Code is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bams Gener Code {{ id }}?"
+            },
+            "detail": {
+                "title": "Bams Gener Code"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "activated": "Activated",
+            "createdby": "Createdby",
+            "createddate": "Createddate",
+            "lastmodifiedby": "Lastmodifiedby",
+            "lastmodifieddate": "Lastmodifieddate",
+            "versionId": "Version Id",
+            "bamsGenerType": "Bams Gener Type",
+            "bamsUser": "Bams User",
+            "bamsAuthority": "Bams Authority"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "bvloginApp": {
+        "bamsOutletPro" : {
+            "home": {
+                "title": "Outlet Product",
+                "createLabel": "Create New",
+                "createOrEditLabel": "Create or edit a Outlet Product",
+                "search": "Search"
+            },
+            "created": "A new Bams Outlet Product is created with identifier {{ param }}",
+            "updated": "A Bams Outlet Product is updated with identifier {{ param }}",
+            "deleted": "A Bams Outlet Product is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Outlet Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Outlet Product"
+            },
+            "sourcedata": "Sourcedata",
+            "producttype": "Producttype",
+            "effectivedate": "Effectivedate",
+            "ceasedate": "Ceasedate",
+            "productcode": "Productcode",
+            "companycode": "Companycode",
+            "bamsOutlet": "Bams Outlet"
+        }
+    }
+}
